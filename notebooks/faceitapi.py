@@ -24,7 +24,7 @@ HEADER = {"Authorization": f"Bearer {api_key}"}
 
 
 # Get match stats method
-def get_match_stats(player_id, offset):
+def get_player_match_stats(player_id, offset):
     url = "https://open.faceit.com/data/v4/players/"
     headers=HEADER
     query = f"{player_id}/games/csgo/stats?offset={offset}&limit=100"
@@ -81,7 +81,7 @@ def get_match_stats(match_id):
 # TESTS
 # Test for get_match_stats
 jj_faceit_id = faceit_id        
-#obj = get_match_stats(jj_faceit_id, "0")
+#obj = get_player_match_stats(jj_faceit_id, "0")
 #print(obj)
 
 # Test for get_player_hist
