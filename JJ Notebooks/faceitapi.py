@@ -81,7 +81,10 @@ def get_match_stats(match_id):
 # TESTS
 # Test for get_match_stats
 jj_faceit_id = faceit_id        
-#obj = get_player_match_stats(jj_faceit_id, "0")
+obj = get_player_match_stats(jj_faceit_id, "0")
+with open("./test111.json", 'w') as file:
+    json.dump(obj, file, indent=2)
+    
 #print(obj)
 
 # Test for get_player_hist
