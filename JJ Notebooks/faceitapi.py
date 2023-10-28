@@ -9,12 +9,11 @@ import pandas as pd
 load_dotenv()
 
 
-
 faceit_id = os.getenv("FACEIT_PLAYER_ID")
 api_key = os.getenv("API_KEY")
 game_id = "csgo"
 
-#print(faceit_id, api_key)
+print(faceit_id, api_key)
 HEADER = {"Authorization": f"Bearer {api_key}"}
 
 
@@ -80,10 +79,10 @@ def get_match_stats(match_id):
 
 # TESTS
 # Test for get_match_stats
-jj_faceit_id = faceit_id        
-obj = get_player_match_stats(jj_faceit_id, "0")
-with open("./test111.json", 'w') as file:
-    json.dump(obj, file, indent=2)
+#jj_faceit_id = faceit_id        
+#obj = get_player_match_stats(jj_faceit_id, "0")
+#with open("./test111.json", 'w') as file:
+#    json.dump(obj, file, indent=2)
     
 #print(obj)
 
