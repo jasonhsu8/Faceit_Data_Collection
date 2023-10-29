@@ -9,11 +9,12 @@ import pandas as pd
 load_dotenv()
 
 
-faceit_id = os.getenv("FACEIT_PLAYER_ID")
+player_id = os.getenv("FACEIT_PLAYER_ID")
 api_key = os.getenv("API_KEY")
 game_id = "csgo"
 
-print(faceit_id, api_key)
+print(player_id, api_key)
+
 HEADER = {"Authorization": f"Bearer {api_key}"}
 
 
@@ -79,21 +80,24 @@ def get_match_stats(match_id):
 
 # TESTS
 # Test for get_match_stats
-#jj_faceit_id = faceit_id        
-#obj = get_player_match_stats(jj_faceit_id, "0")
-#with open("./test111.json", 'w') as file:
-#    json.dump(obj, file, indent=2)
+liam_faceit_id = player_id    
+offset = 900
+offset_100 = offset + 100
+player = "liam"
+obj = get_player_match_stats(liam_faceit_id, offset)
+with open(f"./Match_Stats_{offset}_{offset_100}_{player}.json", 'w') as file:
+    json.dump(obj, file, indent=2)
     
 #print(obj)
 
 # Test for get_player_hist
-jj_start_time = "1518825600"
-jj_end_time = "1695770460"
+#jj_start_time = "1518825600"
+#jj_end_time = "1695770460"
 #obj1 = get_player_hist(jj_faceit_id, jj_start_time, jj_end_time,"0")
 #print(obj1)
 
 # Test for get_match_stats
-jj_match_id = "1-eac8e2f3-19c2-46a5-83d9-a43ca18b1ede"
+#jj_match_id = "1-eac8e2f3-19c2-46a5-83d9-a43ca18b1ede"
 #obj2 = get_match_stats(jj_match_id)
 #print(obj2)
 

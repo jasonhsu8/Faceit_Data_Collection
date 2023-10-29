@@ -76,7 +76,12 @@ target/
 .ipynb_checkpoints/
 
 # exclude data from source control by default
-/data/
+/MyFaceitData/
+/TobyFaceitData/
+/JoshFaceitData/
+/FredFaceitData/
+/EmilFaceitData/
+/LiamFaceitData/
 
 # Mac OS-specific storage files
 .DS_Store
